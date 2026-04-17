@@ -10,10 +10,10 @@ namespace zSounds
 	private:
 		uint32_t ID;
 
-		bool LoadAudioFile(const char* filename, std::vector<char>& buffer, ALenum& format, ALsizei& freq);
+		bool LoadAudioFile(const wchar_t* filename, std::vector<char>& buffer, ALenum& format, ALsizei& freq);
 
 	public:
-		Sound(const std::string& soundPath);
+		Sound(const wchar_t* filename);
 		~Sound();
 
 		inline uint32_t GetID() const { return ID ? ID : 0; }

@@ -13,6 +13,8 @@ namespace zSounds
 		SoundSource();
 		~SoundSource();
 
+		inline uint32_t GetID() const { return ID ? ID : 0; }
+
 		void Play(const Sound& sound);
 		void Resume();
 		void Pause();
